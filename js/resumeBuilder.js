@@ -22,9 +22,9 @@ var bio = {
 	"contacts": {
 		"github": "github.com/IreneFlorez",
 		"twitter": "@IreneFlorez",
-		"location": "San Francisco, CA"
-		"email": "emailplaceholder@mail.com"
-		"mobile": "cell number"
+		"location": "San Francisco, CA",
+		"email": "emailplaceholdercom",
+		"mobile": "cell number",
 	},
 	"bioPic": "images/profile.png",
 	"welcomeMsg": "Managing the launch of digital solutions, systematically",
@@ -64,32 +64,28 @@ for(i in formattedContactInfo) {
 
 var work = {
 	"jobs": [
-		{
-			"employer": "We Vote",
+		
+		{	"employer": "We Vote",
 			"title": "Engineering & Analytics Intern",
 			"location": "San Francisco, CA",
 			"dates": "January 2017 - Present",
-			"description": "Working on a Django/Python server that uses a PostGresSQL database."+ 
-							"Used BeautifulSoup to update API page designs per industry standards."+
-							"Currently developing an impact dashboard, using Google Analytics tools, that can be used across the organization"+
-							"to inform key UX and operations decisions."+
+			"description":"Working on a Django/Python server that uses a PostGresSQL database. Currently developing an impact dashboard."
 		},
-		{
-			"employer": "Udacity",
+
+		{	"employer": "Udacity",
 			"title": "Front End Developer (nanodegree)",
 			"location": "San Francisco, CA",
 			"dates": "June 2017 - Present",
 			"description": "Building projects using HTML, CSS, Javascript, and Git."
 		},
-		{
-			"employer": "[M] Mothercoders",
+		
+		{	"employer": "[M] Mothercoders",
 			"title": "Front End Developer Trainee",
 			"location": "San Francisco, CA",
 			"dates": "September, 2016 - February, 2017",
-			"description": "Built a website using CSS and JavaScript."+ 
-							"MotherCoders is a Google-backed tech orientation program for moms who want to learn computer programming,"+ 
-							"expand their understanding of the technology landscape, and network with peers and industry professionals."+
-		},]
+			"description": "Built a website using CSS and JavaScript."
+		},
+	]
 };		
 
 
@@ -141,41 +137,48 @@ function locationizer(work_obj){
 
 var education = {
 	"schools": [
+		
 		{ "name": "Mills College",
 			"location": "Oakland, CA",
 			"degree": "B.A.(Hon) International Relations",
 			"dates" : "undefined",
 			"major": "International Relations (game theory focus)",
 			"url" : "www.site.com",
-		}		
-		{ "name": "Tokyo University of Foreign Studies",
+		},		
+		
+		{"name": "Tokyo University of Foreign Studies",
 			"location": "Tokyo, Japan",
 			"degree": "Year abroad",
-			"dates" : "undefined"
+			"dates" : "undefined",
 			"major": "Development Economics, Japanese Culture",
 			"url" : "www.site.com",
-		}		
+		},		
 
 		{ "name": "Knight Digital Media Center (KDMC) at University of California, Berkeley",
 			"location": "Berkeley, CA",
 			"degree": "Data Journalism Workshop Series",
 			"major": "Data, QGIS & Fusion Table",
-			"dates" : "undefined"
+			"dates" : "undefined",
 			"url" : "www.site.com",
 		}	
-		],
+	],
 
 	"onlineCourses": [
+
 		{ "school": "Udacity",
 			"title": "Javascript Basics",
+		},
+
 		{ "school": "Udacity",
 			"dates": "August, 2017",
 			"url": "https://www.udacity.com/course/ud804"
 		},
-			"title": "Intro to HTML and CSS",
+
+		{	"title": "Intro to HTML and CSS",
 			"dates" : "July, 2017",
 			"url": "https://www.udacity.com/course/ud304"
 		},	
+
 		{ "school": "Udacity",
 			"title": "Web Development",
 			"dates": "June, 2017",
@@ -219,7 +222,6 @@ education.display = function() {
 				$(".education-entry:last").append(formattedOnlineURL);
 			}
 		}
-		
 	}
 }
 
@@ -259,39 +261,3 @@ projects.display = function(){
 
 
 $("#mapDiv").append(googleMap);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
