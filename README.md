@@ -1,5 +1,5 @@
-# Udacity Front End Development course Resume Project
-## This project was created to satisfy the third requirement in the Udacity Fund course requirements
+# Udacity Front-End Development course Resume Project
+## This project was created to satisfy the third requirement in the Udacity Front-End Development course 
 
 Online Resume [Project Rubric](https://review.udacity.com/?_ga=1.189245867.12280332.1465333852#!/projects/2962818615/rubric).
 
