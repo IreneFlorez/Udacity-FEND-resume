@@ -9,7 +9,7 @@ var bio = {
 			"location": "San Francisco, CA",
 	},
 	"welcomeMsg": "Managing the launch of digital solutions, systematically",
-	"bioPic": "images/profile.png",
+	"bioPic": "images/profile.jpg",
 	"skills": ["Javascript", "python", "data analysis", "user-focused design"]
 };
 
@@ -98,12 +98,12 @@ var projects = {
 		{	"title": "Project2",
 			"dates": "Summer, 2017",
 			"description": "Portfolio Project",
-			"images": ["images/profile.png"],
+			"images": ["images/project.jpg"],
 		},
 		{	"title": "Project1",
 			"dates": "Summer, 2017",
 			"description": "Resume Project",
-			"images": ["images/profile.png"],
+			"images": ["images/project.jpg"],
 		}
 		]
 	};
@@ -159,12 +159,12 @@ var education = {
 		{ 	"school": "Udacity",
 			"title": "Front End Web Development",
 			"dates": "June, 2017",
-			"url": "https://www.udacity.com"
+			"url": "udacity.com"
 		},
 		{ 	"school": "Coursera",
 			"title": "Python for Everybody",
 			"dates": "January, 2017",
-			"url": "https://www.coursera.org"
+			"url": "coursera.org"
 		}
 	]
 };
