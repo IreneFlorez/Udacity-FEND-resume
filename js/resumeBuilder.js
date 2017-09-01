@@ -86,6 +86,7 @@ work.display = function(){
 				$(".work-entry:last").append(formattedTitle);
 			
 			var formattedEmployerWorkTitle = formattedEmployer + formattedTitle;
+				$(".work-entry:last").append(formattedEmployerWorkTitle);
 			
 			var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 				$(".work-entry:last").append(formattedLocation);
