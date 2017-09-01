@@ -9,7 +9,7 @@ var bio = {
 			"location": "San Francisco, CA",
 	},
 	"welcomeMsg": "Managing the launch of digital solutions, systematically",
-	"profileImage": "images/profile.png",
+	"bioPic": "images/profile.png",
 	"skills": ["Javascript", "python", "data analysis", "user-focused design"]
 };
 
@@ -21,18 +21,23 @@ bio.display = function(){
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-	var formattedProfileImage = HTMLprofileImage.replace("%data%", bio["profileImage"]);
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio["bioPic"]);
 	var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio["welcomeMsg"]);
 
 	
 	$("#header").prepend(formattedName + formattedRole);
-	$("#header").append(formattedProfileImage);	
+	$("#header").append(formattedBioPic);	
 	$("#header").append(formattedWelcomeMsg);
 	$("#topContacts").append(formattedMobile);
 	$("#topContacts").append(formattedEmail);
 	$("#topContacts").append(formattedGithub);
 	$("#topContacts").append(formattedTwitter);	
 	$("#topContacts").append(formattedLocation);
+	$("#footerContacts").append(formattedMobile);
+	$("#footerContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedTwitter);	
+	$("#footerContacts").append(formattedLocation);
 
 	if (bio.skills.length > 0) {
 	    	$("#header").append(HTMLskillsStart);
@@ -46,7 +51,90 @@ bio.display = function(){
 	}
 }
 
+var work = {
+	"jobs": [
+		
+		{	"employer": "We Vote",
+			"title": "Engineering & Analytics Intern",
+			"location": "San Francisco, CA",
+			"dates": "January 2017 - Present",
+			"description":"Working on a Django/Python server that uses a PostGresSQL database. Currently developing an impact dashboard."
+		},
+		{	"employer": "Udacity",
+			"title": "Front End Developer (nanodegree)",
+			"location": "San Francisco, CA",
+			"dates": "June 2017 - Present",
+			"description": "Building projects using HTML, CSS, Javascript, and Git."
+		},
+		{	"employer": "[M] Mothercoders",
+			"title": "Front End Developer Trainee",
+			"location": "San Francisco, CA",
+			"dates": "September, 2016 - February, 2017",
+			"description": "Built a website using CSS and JavaScript."
+		},
+	]
+};		
 
+work.display = function(){
+	if(work.jobs.length > 0) {
+		$("#workExperience").append(HTMLworkStart);
+		
+		for(job in work.jobs) {
+			var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+			
+			var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+				$(".work-entry:last").append(formattedTitle);
+			
+			var formattedEmployerWorkTitle = formattedEmployer + formattedTitle;
+			
+			var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+				$(".work-entry:last").append(formattedLocation);
+			
+			var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+				$(".work-entry:last").append(formattedDates);
+			
+			var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+				$(".work-entry:last").append(formattedWorkDescription);
+		}
+	}
+}
+
+var projects = {
+	"projects": [
+		{	"title": "Project2",
+			"dates": "Summer, 2017",
+			"description": "Portfolio Project",
+			"images": ["images/profile.png"],
+		},
+		{	"title": "Project1",
+			"dates": "Summer, 2017",
+			"description": "Resume Project",
+			"images": ["images/profile.png"],
+		}
+		]
+	}
+
+projects.display = function(){
+	for (project in projects.projects){
+	$("#projects").append(HTMLprojectStart);
+	
+	var formattedTitle=HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+	$(".project-entry:last").append(formattedTitle);
+
+	var formattedDates=HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+	$(".project-entry:last").append(formattedDates);
+
+	var formattedDescription=HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+	$(".project-entry:last").append(formattedDescription);
+
+		if (projects.projects[project].images.length>0){
+			for (image in projects.projects[project].images) {
+				var formattedImage=HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+				$(".project-entry:last").append(formattedImage);
+			}
+		}
+	}
+};
 
 var education = {
 	"schools": [
@@ -114,50 +202,6 @@ education.display = function() {
 	}
 }
 
-var work = {
-	"jobs": [
-		
-		{	"employer": "We Vote",
-			"title": "Engineering & Analytics Intern",
-			"location": "San Francisco, CA",
-			"dates": "January 2017 - Present",
-			"description":"Working on a Django/Python server that uses a PostGresSQL database. Currently developing an impact dashboard."
-		},
-		{	"employer": "Udacity",
-			"title": "Front End Developer (nanodegree)",
-			"location": "San Francisco, CA",
-			"dates": "June 2017 - Present",
-			"description": "Building projects using HTML, CSS, Javascript, and Git."
-		},
-		{	"employer": "[M] Mothercoders",
-			"title": "Front End Developer Trainee",
-			"location": "San Francisco, CA",
-			"dates": "September, 2016 - February, 2017",
-			"description": "Built a website using CSS and JavaScript."
-		},
-	]
-};		
-
-
-work.display = function(){
-	if(work.jobs.length > 0) {
-		$("#workExperience").append(HTMLworkStart);
-		
-		for(job in work.jobs) {
-			var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-			var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-				$(".work-entry:last").append(formattedTitle);
-			var formattedEmployerWorkTitle = formattedEmployer + formattedTitle;
-			var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-				$(".work-entry:last").append(formattedLocation);
-			var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-				$(".work-entry:last").append(formattedDates);
-			var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-				$(".work-entry:last").append(formattedWorkDescription);
-		}
-	}
-}
-
 function locationizer(work_obj){
 	var locationArray = [];
 
@@ -167,43 +211,6 @@ function locationizer(work_obj){
 	}
 	return locationArray;
 }
-
-var projects = {
-	"projects": [
-		{	"title": "Project2",
-			"dates": "Summer, 2017",
-			"description": "Portfolio Project",
-			"images": ["images/profile.png"],
-		},
-		{	"title": "Project1",
-			"dates": "Summer, 2017",
-			"description": "Resume Project",
-			"images": ["images/profile.png"],
-		}
-		]
-	}
-
-projects.display = function(){
-	for (project in projects.projects){
-	$("#projects").append(HTMLprojectStart);
-	
-	var formattedTitle=HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-	$(".project-entry:last").append(formattedTitle);
-
-	var formattedDates=HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-	$(".project-entry:last").append(formattedDates);
-
-	var formattedDescription=HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-	$(".project-entry:last").append(formattedDescription);
-
-		if (projects.projects[project].images.length>0){
-			for (image in projects.projects[project].images) {
-				var formattedImage=HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-				$(".project-entry:last").append(formattedImage);
-			}
-		}
-	}
-};
 
 //Map
 $("#mapDiv").append(googleMap);
