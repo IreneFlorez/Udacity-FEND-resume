@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <title>Resume</title>
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/foundation.css" rel="stylesheet">
 
-
+    <!-- Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300">
 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
@@ -24,27 +26,26 @@
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clear-fix">
+    <div id="header" class="center-content clear-fix text-muted">
       <ul id="topContacts" class="flex-box"></ul>
     </div>
     <div style="clear: both;"></div>
-
-    <div id="education" class="gray">
-      <h2>Education</h2>
+    <div id="education" class="history-section">
+      <h3>Education</h3>
+    </div>
+    <div id="workExperience" class="history-section">
+      <h3>Work Experience</h3>
+    </div>
+    <div id="projects" class="history-section">
+      <h3>Projects</h3>
     </div>
 
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
 
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
+    <div id="mapDiv" class="history-section">
+      <h3>Where I've Lived and Worked</h3>
     </div>
     <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
+      <h3 class="orange center-text">Let's Connect</h3>
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
