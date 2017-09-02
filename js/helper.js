@@ -26,7 +26,7 @@ var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</sp
 var HTMLbioPic = '<img src="%data%" class="bioPic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
+var HTMLskillsStart = '<h5 id="skills-h5">Skills at a Glance:</h5><ul id="skills" class="flex-column"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 
@@ -49,7 +49,7 @@ var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolMajor = '<div class="text-muted"</div><br>Major: %data%';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
