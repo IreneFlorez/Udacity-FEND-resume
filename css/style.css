@@ -1,4 +1,4 @@
-/*body,
+body,
 div,
 ul,
 li,
@@ -11,8 +11,8 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-family: "Lato", sans-serif;
-}*/
+  font-family: "Roboto", sans-serif;
+}
 
 .clear-fix {
   overflow: auto;
@@ -22,10 +22,9 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
-
 }
 
-/*h1 {
+h1 {
   font-size: 40px;
   color: #f5a623;
   line-height: 48px;
@@ -41,6 +40,7 @@ h2 {
 }
 
 h3 {
+  font-style: italic;
   font-size: 20px;
   color: #000;
   line-height: 22px;
@@ -59,14 +59,11 @@ h4,
 h5 {
   padding: 10px 5%;
 
-}*/
-
-
-.text-muted {
-  color: #BBB;
 }
 
+
 .date-text {
+  font-style: italic;
   font-size: 14px;
   color: #999;
   line-height: 16px;
@@ -74,6 +71,7 @@ h5 {
 }
 
 .location-text {
+  font-style: italic;
   font-size: 14px;
   color: #999;
   line-height: 16px;
@@ -100,14 +98,10 @@ a {
   line-height: 28px;
 }
 
-#skills-h5 {
+#skills-h3 {
   color: #f5ae23;
   display: none;
 }
-
-#main {
-  flex: 1 1 70%;
-    }
 
 .orange {
   background-color: #f5ae23;
@@ -135,12 +129,6 @@ a {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
-/*  height: 226px*/
-}
-
-.history-section {
-  padding:  2.5% 5%;
-  color:#0a0a0a;
 }
 
 .flex-box {
@@ -167,10 +155,12 @@ ul {
   list-style-type: none;
 }
 
-.bioPic {
-    width: 25%;
-    border-radius: 50%;
-    margin-top:5px;
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  display: none;
+  border-radius: 50%;
 }
 
 img {
@@ -194,22 +184,18 @@ span {
 }
 
 @media only screen and (max-width:900px) {
-  .bioPic {
-    width: 25%;
-    border-radius: 50%;
-    margin-top:5px;
-}
+  .biopic {
+    width: 175px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
     margin-top: 10%;
   }
-  .bioPic {
-    width: 25%;
-    border-radius: 50%;
-    margin-top:5px;
-}
+  .biopic {
+    width: 150px;
+  }
   .welcome-message {
     display: none;
   }
@@ -224,14 +210,12 @@ span {
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h5,
-  .bioPic {
-    width: 25%;
-    border-radius: 50%;
-    margin-top:5px;
-    display:block;
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
 }
