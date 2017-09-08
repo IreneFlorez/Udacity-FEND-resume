@@ -9,7 +9,7 @@ var bio = {
         "location": "San Francisco, CA",
     },
     "welcomeMsg": "Managing the launch of digital solutions, systematically",
-    "bioPic": "images/profile2.jpg",
+    "bioPic": "images/profile.jpg",
     "skills": ["Javascript", "python", "data analysis", "user-focused design"],
 
     display: function() {
@@ -180,11 +180,11 @@ var education = {
 
         $("#education").append(HTMLonlineClasses);
         education.onlineClasses.forEach(function(onlineClasses) {
-            var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineClasses.title);
-            var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineClasses.school);
+            var formattedOnlineSchool = HTMLonlineTitle.replace("%data%", onlineClasses.title) + HTMLonlineSchool.replace("%data%", onlineClasses.school);
             var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineClasses.dates);
             var formattedOnlineURL = HTMLonlineURL.replace("%data%", onlineClasses.url);
-            $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
+            $("#education").append(HTMLschoolStart);
+            $(".education-entry:last").append(formattedOnlineSchool);
             $(".education-entry:last").append(formattedOnlineDates);
             $(".education-entry:last").append(formattedOnlineURL);
         });
