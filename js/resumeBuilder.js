@@ -8,7 +8,7 @@ var bio = {
         "twitter": "@IreneFlorez",
         "location": "San Francisco, CA",
     },
-    "welcomeMsg": "Managing the launch of digital solutions, systematically",
+    "welcomeMessage": "Managing the launch of digital solutions, systematically",
     "biopic": "images/profile.jpg",
     "skills": ["Javascript", "python", "data analysis", "user-focused design"],
 
@@ -21,9 +21,9 @@ var bio = {
         var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
         var formattedBiopic = HTMLbiopic.replace("%data%", bio.biopic);
-        var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+        var formattedWelcomeMessage = HTMLwelcomeMessage.replace("%data%", bio.welcomeMessage);
         $("#header").prepend(formattedName + formattedRole);
-        $("#header").append(formattedBiopic, formattedWelcomeMsg);
+        $("#header").append(formattedBiopic, formattedWelcomeMessage);
         $("#topContacts").append(formattedMobile);
         $("#topContacts").append(formattedEmail);
         $("#topContacts").append(formattedGithub);
@@ -152,7 +152,7 @@ var education = {
         }
     ],
 
-    "onlineClasses": [{
+    "onlineCourses": [{
             "school": "Udacity",
             "title": "Front End Web Development",
             "dates": "June, 2017",
@@ -180,11 +180,11 @@ var education = {
             $(".education-entry:last").append(formattedSchoolMajor);
         });
 
-        $("#education").append(HTMLonlineClasses);
-        education.onlineClasses.forEach(function(onlineClasses) {
-            var formattedOnlineSchool = HTMLonlineTitle.replace("%data%", onlineClasses.title) + HTMLonlineSchool.replace("%data%", onlineClasses.school);
-            var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineClasses.dates);
-            var formattedOnlineURL = HTMLonlineURL.replace("%data%", onlineClasses.url);
+        $("#education").append(HTMLonlineCourses);
+        education.onlineCourses.forEach(function(onlineCourses) {
+            var formattedOnlineSchool = HTMLonlineTitle.replace("%data%", onlineCourses.title) + HTMLonlineSchool.replace("%data%", onlineCourses.school);
+            var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineCourses.dates);
+            var formattedOnlineURL = HTMLonlineURL.replace("%data%", onlineCourses.url);
             $("#education").append(HTMLschoolStart);
             $(".education-entry:last").append(formattedOnlineSchool);
             $(".education-entry:last").append(formattedOnlineDates);
