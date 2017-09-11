@@ -9,7 +9,7 @@ var bio = {
         "location": "San Francisco, CA",
     },
     "welcomeMsg": "Managing the launch of digital solutions, systematically",
-    "bioPic": "images/profile.jpg",
+    "biopic": "images/profile.jpg",
     "skills": ["Javascript", "python", "data analysis", "user-focused design"],
 
     display: function() {
@@ -20,11 +20,10 @@ var bio = {
         var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
         var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-        var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+        var formattedBiopic = HTMLbiopic.replace("%data%", bio.biopic);
         var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
         $("#header").prepend(formattedName + formattedRole);
-        $("#header").append(formattedBioPic);
-        $("#header").append(formattedWelcomeMsg);
+        $("#header").append(formattedBiopic, formattedWelcomeMsg);
         $("#topContacts").append(formattedMobile);
         $("#topContacts").append(formattedEmail);
         $("#topContacts").append(formattedGithub);
@@ -35,6 +34,9 @@ var bio = {
         $("#footerContacts").append(formattedGithub);
         $("#footerContacts").append(formattedTwitter);
         $("#footerContacts").append(formattedLocation);
+
+
+        //$("#topContacts, #footerContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation, formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
 
         if (bio.skills.length > 0) {
             $('#header').append(HTMLskillsStart);
@@ -129,7 +131,7 @@ var education = {
             "name": "Mills College",
             "location": "Oakland, CA",
             "degree": "B.A.(Hon) International Relations",
-            "majors": "International Relations (game theory focus)",
+            "majors": ["International Relations (game theory focus)"],
             "dates": "n/a",
         },
 
@@ -137,7 +139,7 @@ var education = {
             "name": "Tokyo University of Foreign Studies",
             "location": "Tokyo, Japan",
             "degree": "Year abroad",
-            "majors": "Development Economics, Japanese Culture",
+            "majors": ["Development Economics, Japanese Culture"],
             "dates": "n/a",
         },
 
@@ -145,7 +147,7 @@ var education = {
             "name": "Knight Digital Media Center (KDMC) at University of California, Berkeley",
             "location": "Berkeley, CA",
             "degree": "Data Journalism Workshop Series",
-            "majors": "Data, QGIS & Fusion Table",
+            "majors": ["Data, QGIS & Fusion Table"],
             "dates": "n/a",
         }
     ],
